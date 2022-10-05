@@ -54,6 +54,9 @@ class Dinosaur(Sprite):
             self.dino_rect.y = self.Y_POS
             self.dino_jump = False
             self.jump_vel = self.JUMP_VEL
+        
+        if self.dino_rect.y == self.Y_POS:
+            self.dino_run = True
     
 
 

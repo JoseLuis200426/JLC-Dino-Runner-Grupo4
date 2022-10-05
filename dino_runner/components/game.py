@@ -6,7 +6,6 @@ from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 
 from dino_runner.components.dinosaur import Dinosaur
-from dino_runner.components.cloud import Cloud
 from dino_runner.components.heart import Heart
 
 
@@ -19,7 +18,6 @@ class Game:
         self.clock = pygame.time.Clock()
         self.playing = False
         self.dino = Dinosaur()
-        self.cloud = Cloud()
         self.heart = Heart ()
         self.obstacle_manager = ObstacleManager()
         self.game_speed = 20
@@ -50,7 +48,6 @@ class Game:
         self.screen.fill((255, 255, 255))
         self.draw_background()
         self.dino.draw(self.screen)
-        self.cloud.draw(self.screen)
         self.heart.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         pygame.display.update()

@@ -12,5 +12,6 @@ class Obstacle(Sprite):
     def draw(self, screen):
         screen.blit(self.image, self.image_rect)
 
+
     def update(self):
         self.image_rect.x -= 25
